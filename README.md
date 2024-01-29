@@ -65,6 +65,15 @@ This repository contains a simple Student Registration System built using ASP.NE
 
 2. **Click "Update" Button:**
    - Click the "Update" button to save the changes.
+  
+### Delete Student Record:
+
+1. **Select Student to Delete:**
+   - In the GridView displaying registered students, select the student record you want to delete.
+
+2. **Click "Delete" Button:**
+   - Click the "Delete" button to remove the selected student record.
+
 
 ### View Registered Students:
 
