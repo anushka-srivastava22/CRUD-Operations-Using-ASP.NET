@@ -14,7 +14,6 @@ This repository contains a simple Student Registration System built using ASP.NE
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/ASP.NET-Student-Registration.git
-# ASP.NET Student Registration System
 
 ## Setting up Database:
 
