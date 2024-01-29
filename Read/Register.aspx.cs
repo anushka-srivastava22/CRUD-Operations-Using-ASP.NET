@@ -285,45 +285,6 @@ namespace StudentRegistration
         }
 
 
-        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            try
-            {
-                // Check if the GridView has rows
-                if (e.NewEditIndex >= 0 && e.NewEditIndex < GridView1.Rows.Count)
-                {
-                    GridViewRow row = GridView1.Rows[e.NewEditIndex];
-
-                    // Check if the cells collection is not null
-                    if (row.Cells.Count >= 6)
-                    {
-                        SetDropDownSelectedValues(ddlState, GetStateIdByName(row.Cells[2].Text));
-                        PopulateCities(ddlState.SelectedValue);  // Assuming state information is in the third column (adjust if necessary)
-
-                        // Set the initial value of ddlCity and populate cities
-                        SetDropDownSelectedValues(ddlCity, GetCityIdByName(row.Cells[3].Text));
-
-                        // Now, set other TextBox values
-                        txtName.Text = row.Cells[0].Text;
-                        txtAge.Text = row.Cells[1].Text;
-                        txtAdd.Text = row.Cells[4].Text;
-                        txtNum.Text = row.Cells[5].Text;
-
-                        // Save the index of the edited row in ViewState
-                        ViewState["EditingRow"] = e.NewEditIndex;
-                    }
-                }
-                else
-                {
-                    Response.Write("Error: Index is out of range.");
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log or handle the exception
-                Response.Write("Error: " + ex.Message);
-            }
-        }
         protected void btnReg_Click(object sender, EventArgs e)
         {
             try
